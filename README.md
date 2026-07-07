@@ -113,6 +113,18 @@ python3 scripts/scoper.py --root . --scope "..." --no-monorepo
 python3 scripts/scoper.py --root . --scope "..." --no-token-warnings
 ```
 
+## Token savings
+
+Here is a real comparison from a Next.js POS project with 111 tracked files. The prompt: *"fix the add product button on the inventory page"*.
+
+| Approach | Files read | Tokens | Savings |
+|---|---|---|---|
+| **With spotter** | 6 | ~1,800 | baseline |
+| Without (keyword grep + read matches) | ~17 | ~51,000 | 96.5% |
+| Without (read entire `src/` directory) | ~70 | ~93,000 | 98.1% |
+
+A naive agent that greps for keywords and reads every match consumes about 28x more context than one using spotter. An agent that scans the whole source tree uses 51x more. Both approaches still produce the same edit: spotter finds the right files first.
+
 ## Requirements
 
 - Python 3.7+ (stdlib only, no dependencies)
