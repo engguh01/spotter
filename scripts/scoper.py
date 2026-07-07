@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 scoper.py — context-scoping helper for vibe-coding agents. Part of the
-"spotter" skill: locates candidate files BEFORE the calling agent reads
+"telik" skill: locates candidate files BEFORE the calling agent reads
 any file contents, so the agent never has to scan the whole codebase for
 a short instruction like "fix the header button".
 

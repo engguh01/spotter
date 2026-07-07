@@ -1,6 +1,6 @@
 ---
-name: spotter
-description: Use this skill whenever the user gives a short or vague vibe-coding instruction that references existing UI elements, components, pages, or behavior inside an existing codebase (e.g. "ubah button di header", "samain style sama halaman login", "fix the navbar spacing"). This skill enforces a scoping-first workflow — run scripts/scoper.py to get a short list of relevant file paths BEFORE reading any file contents, instead of scanning or reading the whole project. Do not use this for brand-new files/features with no existing reference, or for tasks that already specify exact file paths.
+name: telik
+description: Use this skill whenever the user gives a short or vague vibe-coding instruction that references existing UI elements, components, pages, or behavior inside an existing codebase (e.g. "ubah button di header", "samain style sama halaman login", "fix the navbar spacing"). This skill enforces a scoping-first workflow: run scripts/scoper.py to get a short list of relevant file paths BEFORE reading any file contents, instead of scanning or reading the whole project. Do not use this for brand-new files/features with no existing reference, or for tasks that already specify exact file paths.
 ---
 
 # Prompt Context Scoper

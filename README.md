@@ -1,7 +1,7 @@
 <h1 align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/spotter-scope%20before%20read-4f46e5?style=for-the-badge&labelColor=1e1e2e">
-    <img src="https://img.shields.io/badge/spotter-scope%20before%20read-4f46e5?style=for-the-badge&labelColor=ffffff">
+    <source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/telik-scope%20before%20read-4f46e5?style=for-the-badge&labelColor=1e1e2e">
+    <img src="https://img.shields.io/badge/telik-scope%20before%20read-4f46e5?style=for-the-badge&labelColor=ffffff">
   </picture>
 </h1>
 
@@ -22,7 +22,7 @@
 
 You tell your agent, *"fix the add product button on the inventory page."*
 
-**Without spotter**, the agent wanders:
+**Without telik**, the agent wanders:
 
 ```
 read(root/)          →  8 entries
@@ -37,7 +37,7 @@ read(match-17)       →  5,000 bytes
 Total: 17 files, ~51,000 tokens
 ```
 
-**With spotter**, the agent locates first:
+**With telik**, the agent locates first:
 
 ```
 scoper.py --scope "..."  →  6 candidates
@@ -54,13 +54,13 @@ Total: 6 files, ~1,800 tokens
 
 Real measurement against a Next.js POS project (111 tracked files, 12 prompts averaged):
 
-| Metric | Without spotter | With spotter | Saved |
+| Metric | Without telik | With telik | Saved |
 |---|---|---|---|
 | Files scanned | 17 | 6 | 65% fewer |
 | Context tokens | ~51K | ~1.8K | 96.5% |
 | Context waste | 28x extra | zero | all of it |
 
-An agent scanning the entire `src/` directory (70 files) burns 51x more context than spotter. Neither reads a byte more relevant code.
+An agent scanning the entire `src/` directory (70 files) burns 51x more context than telik. Neither reads a byte more relevant code.
 
 ## How it works
 
@@ -109,19 +109,19 @@ Scoring extras: frequency penalty for common path tokens, tie-breaking by keywor
 
 ```bash
 # Project-local
-mkdir -p .opencode/skills/spotter
-cp SKILL.md .opencode/skills/spotter/
-cp -r scripts .opencode/skills/spotter/
+mkdir -p .opencode/skills/telik
+cp SKILL.md .opencode/skills/telik/
+cp -r scripts .opencode/skills/telik/
 
 # Global
-mkdir -p ~/.config/opencode/skills/spotter
-cp SKILL.md ~/.config/opencode/skills/spotter/
-cp -r scripts ~/.config/opencode/skills/spotter/
+mkdir -p ~/.config/opencode/skills/telik
+cp SKILL.md ~/.config/opencode/skills/telik/
+cp -r scripts ~/.config/opencode/skills/telik/
 ```
 
 ### Claude Code
 
-Place under `.claude/skills/spotter/` (project) or `~/.claude/skills/spotter/` (global).
+Place under `.claude/skills/telik/` (project) or `~/.claude/skills/telik/` (global).
 
 ## Usage
 

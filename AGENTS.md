@@ -1,4 +1,4 @@
-# spotter — agent notes
+# telik — agent notes
 
 ## Project type
 OpenCode skill, not a user app. `SKILL.md` is the skill definition consumed by OpenCode. `scoper.py` is the single script it invokes.
@@ -48,5 +48,5 @@ python3 -m unittest discover tests/               # run tests
 - Output: JSON with `{cache_status, candidates, related_files, token_estimate, warnings, scope_dir, total_files_indexed}`
 
 ## Distinctions
-- SKILL.md goes into `.opencode/skills/spotter/` or `~/.config/opencode/skills/spotter/`
+- SKILL.md goes into `.opencode/skills/telik/` or `~/.config/opencode/skills/telik/`
 - scoper.py goes into a `scripts/` subdir alongside SKILL.md
